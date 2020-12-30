@@ -10,7 +10,7 @@ namespace ProvaFunzioni
             GestioneArray.LeggiArray(numero);
             GestioneArray.StampaArray(numero);
             int[] copia_array = GestioneArray.CopiaArray(numero);
-            //GestioneArray.RicercaArray(numero, n);
+            GestioneArray.RicercaArray(numero);
         }
     }
 }

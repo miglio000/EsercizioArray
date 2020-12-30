@@ -25,7 +25,7 @@ namespace FunzioniArray
             array.CopyTo(copia, 0);
             return copia;
         }
-        public static bool RicercaArray(int[] array, int n_posizione)
+        public static void RicercaArray(int[] array)
         {
             
             int posizione = 4;  // ricerca
