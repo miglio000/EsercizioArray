@@ -9,8 +9,10 @@ namespace ProvaFunzioni
             int[] numero = new int [5];
             GestioneArray.LeggiArray(numero);
             GestioneArray.StampaArray(numero);
-            int[] copia_array = GestioneArray.CopiaArray(numero);
-            GestioneArray.RicercaArray(numero);
+            int[] copia_Array = GestioneArray.CopiaArray(numero);
+            GestioneArray.StampaArray(copia_Array);
+            bool ricerca_Array = GestioneArray.RicercaArray(numero);
+            Console.WriteLine("Trovato:" + trovato);
         }
     }
 }

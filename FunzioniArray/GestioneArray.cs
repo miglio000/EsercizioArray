@@ -9,7 +9,8 @@ namespace FunzioniArray
             for(int i = 0; i < array.Length; i++)
             {
                 Console.WriteLine("Inserisci un numero: ");
-                array[i] = Convert.ToInt32(Console.ReadLine());
+                int n = Convert.ToInt32(Console.ReadLine());
+                array[i] = n;
             }
         }
         public static void StampaArray(int[] array)
@@ -19,6 +20,16 @@ namespace FunzioniArray
                 Console.WriteLine($"Hai inserito: {array[i]}");
             }
         }
+        public static int[] ArrayRibaltato(int[] array)
+        {
+            int[] copia = new int[array.Length];
+            int i2 = 0;
+            for(int i = array.Length-1; i >= 0; i--)
+            {
+                copia[i] = array[i2++];
+            }
+            return copia;
+        }
         public static int[] CopiaArray(int[] array)
         {
             int[] copia = new int[array.Length];
@@ -27,7 +38,7 @@ namespace FunzioniArray
         }
         public static void RicercaArray(int[] array)
         {
-            
+
             int posizione = 4;  // ricerca
             int pos = -1; // indice in cui è stato trovato. -1 significa non trovato
 
@@ -46,7 +57,6 @@ namespace FunzioniArray
             else
             {
                 Console.WriteLine("Non trovato");
-            }             
+            }
         }
-    }
 }
