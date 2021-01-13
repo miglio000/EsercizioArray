@@ -4,9 +4,9 @@ namespace FunzioniArray
 {
     public class GestioneArray
     {
-        public static void LeggiArray(int[] array )
+        public static void LeggiArray(int[] array)
         {
-            for(int i = 0; i < array.Length; i++)
+            for (int i = 0; i < array.Length; i++)
             {
                 Console.WriteLine("Inserisci un numero: ");
                 int n = Convert.ToInt32(Console.ReadLine());
@@ -24,7 +24,7 @@ namespace FunzioniArray
         {
             int[] copia = new int[array.Length];
             int i2 = 0;
-            for(int i = array.Length-1; i >= 0; i--)
+            for (int i = array.Length - 1; i >= 0; i--)
             {
                 copia[i] = array[i2++];
             }
@@ -36,27 +36,17 @@ namespace FunzioniArray
             array.CopyTo(copia, 0);
             return copia;
         }
-        public static void RicercaArray(int[] array)
+        public static bool RicercaArray(int[] array, int vero)
         {
-
-            int posizione = 4;  // ricerca
-            int pos = -1; // indice in cui è stato trovato. -1 significa non trovato
-
-            for (int i = 0; i < array.Length; i++)
+            bool trova = false;
+            for(int i = 0; i < array.Length && !trova; i++)
             {
-                if (array[i] == posizione)
+                if (array[i] == vero)
                 {
-                    pos = i;
-                    break;
+                    trova = true;
                 }
             }
-            if (pos != -1)
-            {
-                Console.WriteLine($"La ricerca di {posizione} è stata trovata in posizione {pos}");
-            }
-            else
-            {
-                Console.WriteLine("Non trovato");
-            }
+            return trova;
         }
+    }
 }
